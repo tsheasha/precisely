@@ -28,5 +28,6 @@ class PDFTest(TestCase):
         doc = Document.objects.get(signature_request_id='test')
         self.assertEqual(doc.is_signed, False)
         response = c.get('/signed/?event=signature_request_signed&signature_id=test')
-        self.assertRedirects(response, '/', status_code=302, target_status_code=200)
+        doc = Document.objects.get(signature_request_id='test')
         self.assertEqual(doc.is_signed, True)
+        self.assertRedirects(response, '/', status_code=302, target_status_code=200)
