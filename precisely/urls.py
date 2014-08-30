@@ -10,8 +10,8 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('sign_pdf.views',
     url(r'^$', 'home', name='home'),
-    url(r'^signed$', 'signed', name='signed'),
-    url(r'^sign$', 'send_to_sign', name='sign'),
+    url(r'^signed/$', 'signed', name='signed'),
+    url(r'^sign/$', 'send_to_sign', name='sign'),
 
 )
 
