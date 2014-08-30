@@ -17,12 +17,15 @@ def home(request):
     return render_to_response("index.html", {'docs':docs}, RequestContext(request)) 
 
 def signed(request):
-    if 'event' in request.GET:
-        if request.GET['event'] == 'signature_request_signed':
-            if 'signature_id' in request.GET:
-                doc = Document.objects.get(signature_request_id=request.GET['signature_id'])
-                doc.is_signed = True
-                doc.save()
+    try:
+        if 'event' in request.GET:
+            if request.GET['event'] == 'signature_request_signed':
+                if 'signature_id' in request.GET:
+                    doc = Document.objects.get(signature_request_id=request.GET['signature_id'])
+                    doc.is_signed = True
+                    doc.save()
+    except:
+        pass
     return HttpResponseRedirect('/')
 
 def send_to_sign(request):
