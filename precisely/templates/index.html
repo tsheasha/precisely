@@ -10,7 +10,7 @@
         <div id = "leftHalf">
      
             <div id="sign_pdf" class="landing form section">
-                <form method="POST" action="/" id="pdfForm" enctype="multipart/form-data">
+                <form method="POST" action="/sign/" id="pdfForm" enctype="multipart/form-data">
                     {% csrf_token %}
                     <label for="name"></label>
                     <input id="name" type="text" name="name" placeholder="Signer name" value="">
