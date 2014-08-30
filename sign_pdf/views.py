@@ -57,7 +57,6 @@ def send_to_sign(request):
         doc.save()
 
         try:
-
             files = [doc.get_file_url()]
         except:
             files = ['https://drive.google.com/file/d/0B0LIuW1RdH4XYl9vVHNJZ0JqMGc/edit?usp=sharing']

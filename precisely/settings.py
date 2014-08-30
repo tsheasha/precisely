@@ -17,9 +17,10 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DEPLOYED_ADDRESS = "http://precisely.herokuapp.com"
+LOCALHOST = True
 
 if 'DATABASE_URL' in os.environ:
-    DEPLOYED_ADDRESS = "http://precisely.herokuapp.com"
+    LOCALHOST = False
     DATABASES = {'default': dj_database_url.config(default=os.environ['DATABASE_URL'])}
 
 else:

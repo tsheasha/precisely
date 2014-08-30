@@ -16,4 +16,6 @@ class Document(models.Model):
     signature_request_id = models.CharField(max_length=128, blank=True, null=True)
 
     def get_file_url(self):
-       return ''.join([settings.DEPLOYED_ADDRESS, self.pdf.url])
+        if settings.LOCALHOST:
+            return 'https://drive.google.com/file/d/0B0LIuW1RdH4XYl9vVHNJZ0JqMGc/edit?usp=sharing'
+        return ''.join([settings.DEPLOYED_ADDRESS, self.pdf.url])
