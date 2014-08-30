@@ -1,0 +1,251 @@
+#landing input[type="text"],#landing button,#landing textarea {
+    padding: 0 1.25rem;
+    background: white;
+    border: 0;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    border-radius: .25rem;
+    margin: .5rem .25rem;
+    color: #555459;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Lato',sans-serif;
+    -webkit-appearance: none;
+    vertical-align: bottom;
+    height: 48px;
+    width: 450px;
+    display: block;
+    text-align: center;
+    margin-left: 95px;
+}
+
+#landing button {
+    background: #439fe0;
+    color: white;
+    font-weight: 700;
+    padding: .75rem 2rem !important;
+    text-shadow: 0 1px 1px black;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    border-bottom: 2px solid #194ba3;
+    cursor: pointer;
+    width: 450px;
+    -webkit-transitionDISABLED: background .1s ease-out;
+    -moz-transitionDISABLED: background .1s ease-out;
+    -o-transitionDISABLED: background .1s ease-out;
+    transitionDISABLED: background .1s ease-out
+}
+
+#landing .section.landing.form {
+    padding: 1rem 1.3rem;
+    display: inline-block;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    border-radius: .5rem;
+    background: rgba(0,0,0,0.5)
+
+}
+
+.section {
+    overflow: hidden;
+    text-shadow: 0 1px #fff
+}
+
+#landing .section.landing.form p {
+    color: #ba9;
+    font-weight: 500;
+    margin: .25rem .25rem .4rem .25rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem
+}
+
+
+body {
+    width: 100%;
+    font-family: 'Lato',sans-serif;
+    color: #555459;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+    background: white;
+    overflow-x: hidden;
+    -webkit-transition: translate3d(0,0,0)
+}
+
+html,body,div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased
+}
+
+#sign_pdf {
+    width: 85%;
+    margin-left: 50px;
+    float: left;
+    position: absolute;
+    margin-top: 255px; 
+}
+
+#leftHalf {
+    background-image:
+    url('http://www.oldpapers.org/wp-content/uploads/2013/08/Law2.jpg');
+    width: 58%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    background-size: cover;
+    background-position-x: -150px;
+}
+
+#rightHalf {
+    background-image: url('http://lifewayblog.wpengine.netdna-cdn.com/vbs/files/2013/10/confidential.png');
+    width: 42%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    background-position-y: 250px;
+    background-size: contain;
+    background-image: ;
+    background-repeat: no-repeat;
+}
+
+#pdfList {
+    max-height: 90%;
+    overflow-x: auto;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+ 
+html {
+	background: #DEF;
+	background: linear-gradient(45deg, #FFE, #FED);
+	min-height: 100%;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-weight: 300;
+}
+ 
+.mono {
+	font-family: monospace;
+}
+ 
+pre {
+	background: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	border: 1px solid #FFF;
+}
+ 
+#wrapper {
+	width: 90%;
+	margin: 50px auto;
+    min-height: 1000px;
+}
+ 
+#columns {
+	column-count: 3;
+	column-gap: 10px;
+}
+ 
+.pin {
+	display: inline-block;
+	background: #FEFEFE;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	column-break-inside: avoid;
+	padding: 15px;
+	background: linear-gradient(45deg, #FFF, #F9F9F9);
+}
+ 
+.pin img {
+	width: 100%;
+}
+ 
+.pin p {
+	margin: 0;
+}
+ 
+@media all and (min-width: 960px) {
+	#columns {
+		column-count: 2;
+	}
+}
+ 
+@media all and (min-width: 1170px) {
+	#columns {
+		column-count: 3;
+	}
+}
+
+.plan {
+    position: absolute !important;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+
+#file {
+    width: 100%;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    position: relative;
+    top: -20;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+
+}
+
+.myfile {
+    overflow: hidden;
+    margin-bottom: 5px;
+    display: block !important;
+    margin-bottom: 0;
+    font-weight: 900;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 20%;
+    height: 35px;
+    margin-left: 245px;
+}
+
+.submit {
+    background: #439fe0;
+    color: white !important;
+    font-weight: 700;
+    padding: .75rem 2rem !important;
+    text-shadow: 0 1px 1px black;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    border-bottom: 2px solid #194ba3;
+    cursor: pointer;
+    width: 450px;
+    -webkit-transitionDISABLED: background .1s ease-out;
+    -moz-transitionDISABLED: background .1s ease-out;
+    -o-transitionDISABLED: background .1s ease-out;
+    transitionDISABLED: background .1s ease-out;
+    margin-top: 10px;
+    margin-left: -35px;
+}
+
+#uploadPDF {
+    opacity: 0;
+    width: 100%;
+    display: inline-block;
+    margin-left: -140px;
+}

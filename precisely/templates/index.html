@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Precisely | Sign your PDF</title>
+        <link rel="stylesheet" href="{{STATIC_URL}}stylesheets/bootstrap.min.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}stylesheets/precisely.css">
+        
+    </head>
+
+    <div id="landing">
+        <div id = "leftHalf">
+     
+            <div id="sign_pdf" class="landing form section">
+                <form method="POST" action="/" id="pdfForm" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="name"></label>
+                    <input id="name" type="text" name="name" placeholder="Signer name" value="">
+                     
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" placeholder="Signer email" value "">
+
+                    <label for="subject"></label>
+                    <input id="subject" type="text" name="subject" placeholder="subject" value="">
+
+                    <label for="message"></label>
+                    <input id="message" type="text" name="message" placeholder="Message" value="">
+
+                    <span class="myfile btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Add file</span>
+                        <input id="file" type="file" name="file">
+                    </span>
+
+                    <span class="submit btn">
+                        <span style="margin-left: 130px;">Upload PDF and sign</span>
+                        <input id="uploadPDF" type="submit" name="submit">
+                    </span>
+                </form>
+            </div>
+            <div id="uploadResult">
+            </div>
+        </div>
+      
+        <div id="rightHalf">
+            <div id="pdfList"><a name="common"></a>
+                {% if docs %}
+                <div id="wrapper">
+                    <div id="columns">
+                        {% for doc in docs %} 
+                            <div class="pin">
+                                {% if doc.is_signed %}
+                                    <p>
+                                        Doc signed by {{doc.receiver}} - {{doc.receiver_email}}
+                                    </p>
+                                    {% else %}
+                                    <p>
+                                        Doc pending signature from {{doc.receiver}} - {{doc.receiver_email}}
+                                    </p>
+                                {% endif %}
+                                <p>
+                                    | {{doc.date_modified}}
+                                </p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% else %}
+                <div id="wrapper">
+                    <div id="columns">
+                        <div class="pin">
+                            <p>
+                                There are no files yet, upload the first!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{{STATIC_URL}}js/vendor/jquery-1.10.1.min.js"></script>
+	<script src="{{STATIC_URL}}js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="{{STATIC_URL}}js/vendor/notify-ui.js"></script>
+
+</html>
